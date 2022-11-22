@@ -1,0 +1,91 @@
+.resume {
+    padding-top: 120px;
+    .divider {
+        display: block;
+    }
+    &__wrapper {
+        padding: 65px 65px 0 65px;
+        display: grid;
+        grid-template: 1fr / repeat(2, 378px);
+        grid-auto-rows: 1fr;
+        column-gap: 136px;
+    }
+
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 43px;
+            margin-bottom: 0;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -7px;
+                width: 15px;
+                height: 15px;
+                background: $main-color;
+                border-radius: 50%;
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: calc(100% + 6px);
+                    top: -8px;
+                    left: 0;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 62px;
+            width: 45px;
+            height: 1px;
+            background-color: #000;
+        }
+        &-head {
+            position: relative;
+            padding: 45px 0 0 100px;
+        }
+        &-icon {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            top: 45px;
+            left: 45px;
+            @include before_circle;
+            &:before {
+                top: 0;
+                left: 0;
+            }
+            img {
+                position: absolute;
+                top: 14px;
+                left: 17px;
+            }
+        }
+        &-location {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.contacts {
+    padding: 120px 0 92px 0;
+    &__wrapper {
+        padding: 0 35px 0 50px;
+        display: grid;
+        grid-template: 1fr / 400px 585px;
+        justify-content: space-between;
+    }
+    &__photo {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        padding-top: 7px;
+    }
+    &__title {
+        position: relative;
+        z-index: 2;
+        padding-left: 12px;
+        margin-bottom: 0;
+        @include before_circle;
+    }
+    &__subtitle {
+        margin-top: 5px;
+    }
+    &__text {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .divider {
+        margin: 0;
+    }
+    &__social {
+        display: flex;
+        column-gap: 20px;
+        margin-top: 20px;
+    }
+    &__link {
+        width: 30px;
+        height: 30px;
+        img {
+            width: 100%;
+        }
+        &:nth-child(1) {
+            transform: rotate(90deg);
+        }
+        &:nth-child(3) {
+            transform: rotate(90deg);
+        }
+    }
+    &__form {
+        margin-top: 30px;
+        display: grid;
+        grid-template: 45px 190px 45px / repeat(2, 280px);
+        row-gap: 30px;
+        justify-content: space-between;
+        label {
+            position: absolute;
+            display: block;
+            background-color: #fff;
+            padding: 0 8px;
+            top: -8px;
+            left: 12px;
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 0;
+        }
+    }
+    &__input {
+        position: relative;
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            font-size: 12px;
+        }
+    }
+    &__textarea {
+        position: relative;
+        grid-column: 1 / 3;
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            padding: 20px;
+            font-size: 12px;
+        }
+    }
+    &__triggers {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: 219px auto;
+        column-gap: 35px;
+    }
+    &__policy {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        input {
+            margin-right: 10px;
+        }
+    }
+}
